@@ -8,7 +8,7 @@ This project implements a Convolutional Neural Network (CNN) using TensorFlow/Ke
 - Matplotlib
 - NumPy
 - Pandas
-
+------
 ## Quick Start
 
 1. Install dependencies:
@@ -26,8 +26,7 @@ cd Cifar10-ConvNet
 ```bash
 python cifar10_convnet.py
 ```
-4. Check out the training and validation curves and the evaluation of test dataset
-
+-----
 ## What I Did
 
 - Preprocessed Cifar10 images: normalized pixel values to the range [0, 1].
@@ -36,17 +35,34 @@ python cifar10_convnet.py
 - Added Dropout for regularization to prevent overfitting.
 - Trained the model using the training set, validated on the validation set.
 - Evaluated the final model on the test set.
+-----
+## Data Handling and Model Optimization
 
+### Data Challenges
+Initially, data leakage posed a risk to model performance evident from the graph curves.
+
+### Solutions Implemented
+1. **Data Preprocessing:**
+   - Normalized pixel values to [0, 1].
+
+2. **Data Splitting and Shuffling:**
+   - Shuffled and split the training dataset into training and validation sets.
+
+3. **Model Enhancements:**
+   - Added Batch Normalization for stable training.
+   - Employed a Dropout layer to prevent overfitting.
+  
+-----
 ## Model Architecture
 - Input Layer: Batch Normalization
-- 3 blocks of Convolutional Layers with MaxPooling
-- Fully Connected Layers with ReLU activation
+- 3 Convolutional blocks with MaxPooling
+- Fully Connected Layers with ReLU
 - Dropout Layer for regularization
-- Output Layer with Softmax activation
-
+- Output: Softmax
+------
 ## Results
 - Achieved a test accuracy of 75%.
 - Visualized loss and accuracy curves for training and validation sets.
-
+------
 ## License
 This project is licensed under the [MIT License](LICENSE).
