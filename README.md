@@ -48,3 +48,5 @@ python cifar10_convnet.py
 - Achieved a test accuracy of 75%.
 - Visualized loss and accuracy curves for training and validation sets.
 
+## License
+This project is licensed under the [MIT License](LICENSE).
